@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SwipeMenuLayout">
-        <attr name="leftViewId" format="reference" />
-        <attr name="rightViewId" format="reference" />
-        <attr name="contentViewId" format="reference" />
+        <attr name="leftViewId" format="reference"/>
+        <attr name="rightViewId" format="reference"/>
+        <attr name="contentViewId" format="reference"/>
     </declare-styleable>
 
 
     <declare-styleable name="UniversalMediaController">
-        <attr name="uvv_scalable" format="boolean" />
+        <attr name="uvv_scalable" format="boolean"/>
     </declare-styleable>
 
 
     <declare-styleable name="UniversalVideoView">
-        <attr name="uvv_fitXY" format="boolean" />
-        <attr name="uvv_autoRotation" format="boolean" />
-    </declare-styleable>-->
+        <attr name="uvv_fitXY" format="boolean"/>
+        <attr name="uvv_autoRotation" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CropImageView">
+        <attr name="cropMaskColor" format="color"/>
+        <attr name="cropBorderColor" format="color"/>
+        <attr name="cropBorderWidth" format="dimension"/>
+        <attr name="cropFocusWidth" format="dimension"/>
+        <attr name="cropFocusHeight" format="dimension"/>
+        <attr name="cropStyle" format="enum">
+            <enum name="rectangle" value="0"/>
+            <enum name="circle" value="1"/>
+        </attr>
+
+    </declare-styleable>
+
 
 </resources>

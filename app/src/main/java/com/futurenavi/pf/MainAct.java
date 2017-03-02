@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.futurenavi.pf.erecyclerview.ERecyclerviewAct;
 import com.futurenavi.pf.evideo.EVideoAct;
+import com.futurenavi.pf.picker.PickerAct;
 
 public class MainAct extends AppCompatActivity {
     Intent intent;
@@ -33,6 +34,14 @@ public class MainAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(MainAct.this, ERecyclerviewAct.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btn_picker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainAct.this, PickerAct.class);
                 startActivity(intent);
             }
         });
