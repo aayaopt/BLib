@@ -10,7 +10,7 @@ import com.futurenavi.pf.R;
 import com.futurenavi.pf.erecyclerview.model.Child;
 
 
-public class ChildViewHolder extends ljying.github.io.expandablerecyclerview.viewholders
+public class ChildViewHolder extends futurenavi.lib.erecyclerview.expandablerecyclerview.viewholders
         .ChildViewHolder {
 
     private TextView childTextView,tvChildType,tvChildUpTime;

@@ -7,11 +7,11 @@ import android.widget.TextView;
 
 import com.futurenavi.pf.R;
 
-import ljying.github.io.expandablerecyclerview.models.ExpandableGroup;
+import futurenavi.lib.erecyclerview.expandablerecyclerview.models.ExpandableGroup;
 
 import static android.view.animation.Animation.RELATIVE_TO_SELF;
 
-public class GroupViewHolder extends ljying.github.io.expandablerecyclerview.viewholders.GroupViewHolder {
+public class GroupViewHolder extends futurenavi.lib.erecyclerview.expandablerecyclerview.viewholders.GroupViewHolder {
 
   private TextView bandName;
   private ImageView arrow;

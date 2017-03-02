@@ -13,8 +13,8 @@ import com.futurenavi.pf.erecyclerview.model.Group;
 
 import java.util.List;
 
-import ljying.github.io.expandablerecyclerview.ExpandableRecyclerViewAdapter;
-import ljying.github.io.expandablerecyclerview.models.ExpandableGroup;
+import futurenavi.lib.erecyclerview.expandablerecyclerview.ExpandableRecyclerViewAdapter;
+import futurenavi.lib.erecyclerview.expandablerecyclerview.models.ExpandableGroup;
 
 
 public class GroupAdapter extends ExpandableRecyclerViewAdapter<GroupViewHolder, ChildViewHolder> {

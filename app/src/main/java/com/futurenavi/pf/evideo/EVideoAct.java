@@ -17,6 +17,7 @@
 
 package com.futurenavi.pf.evideo;
 
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,8 +28,8 @@ import android.widget.TextView;
 
 import com.futurenavi.pf.R;
 
-import com.universalvideoview.UniversalMediaController;
-import com.universalvideoview.UniversalVideoView;
+import futurenavi.lib.evideo.UniversalMediaController;
+import futurenavi.lib.evideo.UniversalVideoView;
 
 public class EVideoAct extends AppCompatActivity implements UniversalVideoView.VideoViewCallback{
 

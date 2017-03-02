@@ -13,7 +13,7 @@
         android:background="@android:color/black"
         android:gravity="center">
 
-        <com.universalvideoview.UniversalVideoView
+        <futurenavi.lib.evideo.UniversalVideoView
             android:id="@+id/videoView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,7 +22,7 @@
             app:uvv_fitXY="false"/>
     </FrameLayout>
 
-    <com.universalvideoview.UniversalMediaController
+    <futurenavi.lib.evideo.UniversalMediaController
         android:id="@+id/media_controller"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
