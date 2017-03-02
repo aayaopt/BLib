@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--&lt;!&ndash;ERecyclerView &ndash;&gt;-->
+    <!--<declare-styleable name="SwipeMenuLayout">-->
+        <!--<attr name="leftViewId" format="reference"/>-->
+        <!--<attr name="rightViewId" format="reference"/>-->
+        <!--<attr name="contentViewId" format="reference"/>-->
+    <!--</declare-styleable>-->
+
+
+    <declare-styleable name="ERecyclerSwipeMenuLayout">
+        <attr name="leftViewId" format="reference"/>
+        <attr name="rightViewId" format="reference"/>
+        <attr name="contentViewId" format="reference"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="UniversalMediaController">
+        <attr name="uvv_scalable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="UniversalVideoView">
+        <attr name="uvv_fitXY" format="boolean" />
+        <attr name="uvv_autoRotation" format="boolean" />
+    </declare-styleable>-->
+
+</resources>
