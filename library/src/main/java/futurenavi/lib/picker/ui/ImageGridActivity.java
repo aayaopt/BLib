@@ -25,6 +25,8 @@ import futurenavi.lib.picker.bean.ImageFolder;
 import futurenavi.lib.picker.bean.ImageItem;
 import futurenavi.lib.picker.view.FolderPopUpWindow;
 
+
+
 public class ImageGridActivity extends ImageBaseActivity implements ImageDataSource.OnImagesLoadedListener, ImageGridAdapter.OnImageItemClickListener, ImagePicker.OnImageSelectedListener, View.OnClickListener {
 
     public static final int REQUEST_PERMISSION_STORAGE = 0x01;
@@ -42,14 +44,18 @@ public class ImageGridActivity extends ImageBaseActivity implements ImageDataSou
     private FolderPopUpWindow mFolderPopupWindow;  //ImageSet的PopupWindow
     private List<ImageFolder> mImageFolders;   //所有的图片文件夹
     private ImageGridAdapter mImageGridAdapter;  //图片九宫格展示的适配器
+    public static  String forMulei="thisMulei";
+    boolean isMuleiMode=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pic_act_image_grid);
+        isMuleiMode=  getIntent().getBooleanExtra(ImageGridActivity.forMulei,false);
 
         imagePicker = ImagePicker.getInstance();
         imagePicker.clear();
+        imagePicker.setMultiMode(isMuleiMode);
         imagePicker.addOnImageSelectedListener(this);
 //        imagePicker.setCrop(false);//不裁剪
 
@@ -210,6 +216,7 @@ public class ImageGridActivity extends ImageBaseActivity implements ImageDataSou
         if (imagePicker.getSelectImageCount() > 0) {
             mBtnOk.setText(getString(R.string.select_complete, imagePicker.getSelectImageCount(), imagePicker.getSelectLimit()));
             mBtnOk.setEnabled(true);
+
             mBtnPre.setEnabled(true);
         } else {
             mBtnOk.setText(getString(R.string.complete));

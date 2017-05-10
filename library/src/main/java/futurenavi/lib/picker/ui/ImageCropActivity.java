@@ -28,6 +28,7 @@ public class ImageCropActivity extends ImageBaseActivity implements View.OnClick
     private ArrayList<ImageItem> mImageItems;
     private ImagePicker imagePicker;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

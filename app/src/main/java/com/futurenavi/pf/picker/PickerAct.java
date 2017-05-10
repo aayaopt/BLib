@@ -21,16 +21,24 @@ public class PickerAct extends AppCompatActivity {
 
     public static final int IMAGE_PICKER = 100;
     ImageView iv;
-
+boolean mulei=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_picker);
         iv = (ImageView) findViewById(R.id.iv_picker);
+
+
         findViewById(R.id.btn_picker).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(mulei){
+                    mulei=false;
+                }else{
+                    mulei=true;
+                }
                 Intent intent = new Intent(PickerAct.this, ImageGridActivity.class);
+                intent.putExtra(ImageGridActivity.forMulei,mulei);
                 startActivityForResult(intent, IMAGE_PICKER);
             }
         });
