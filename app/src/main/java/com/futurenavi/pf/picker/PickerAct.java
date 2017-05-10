@@ -27,8 +27,6 @@ boolean mulei=false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_picker);
         iv = (ImageView) findViewById(R.id.iv_picker);
-
-
         findViewById(R.id.btn_picker).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,8 +57,6 @@ boolean mulei=false;
                 for (ImageItem imageItem : images) {
                     Log.e("CSDN_LQR", imageItem.path);
                 }
-
-
                 Log.e("CSDN_LQR", images.get(0).path);
                 iv.setImageURI(Uri.parse(images.get(0).path));
             }
