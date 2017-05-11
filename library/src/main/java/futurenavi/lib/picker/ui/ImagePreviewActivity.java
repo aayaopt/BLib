@@ -34,6 +34,8 @@ public class ImagePreviewActivity extends  ImagePreviewBaseActivity implements I
         isOrigin = getIntent().getBooleanExtra(ImagePreviewActivity.ISORIGIN, false);
         imagePicker.addOnImageSelectedListener(this);
 
+        topBar.findViewById(R.id.btn_back).setOnClickListener(this);
+
         mBtnOk = (Button) topBar.findViewById(R.id.btn_ok);
         mBtnOk.setVisibility(View.VISIBLE);
         mBtnOk.setOnClickListener(this);
@@ -51,7 +53,7 @@ public class ImagePreviewActivity extends  ImagePreviewBaseActivity implements I
         onImageSelected(0, null, false);
         ImageItem item = mImageItems.get(mCurrentPosition);
         boolean isSelected = imagePicker.isSelect(item);
-        mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
+        setTitleCount();
         mCbCheck.setChecked(isSelected);
         updateOriginImageSize();
         //滑动ViewPager的时候，根据外界的数据改变当前的选中状态和当前的图片的位置描述文本
@@ -62,7 +64,7 @@ public class ImagePreviewActivity extends  ImagePreviewBaseActivity implements I
                 ImageItem item = mImageItems.get(mCurrentPosition);
                 boolean isSelected = imagePicker.isSelect(item);
                 mCbCheck.setChecked(isSelected);
-                mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
+                setTitleCount();
             }
         });
         //当点击当前选中按钮的时候，需要根据当前的选中状态添加和移除图片
@@ -87,7 +89,10 @@ public class ImagePreviewActivity extends  ImagePreviewBaseActivity implements I
             }
         });
     }
-
+    private void setTitleCount() {
+        mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1
+                + "", mImageItems.size() + ""));
+    }
     private void updateOriginImageSize() {
         long size = 0;
         for (ImageItem ii : selectedImages)

@@ -5,12 +5,30 @@
               android:orientation="vertical"
               android:layout_height="match_parent">
     <Button
-        android:id="@+id/btn_picker"
+        android:id="@+id/btn_picker_change"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:gravity="center"
-        android:text="打开相册"
+        android:text="打开相册选照片(单张)"
+        tools:text=""/>
+
+    <Button
+        android:id="@+id/btn_picker_change_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="打开相册选照片（多张）"
+        tools:text=""/>
+
+    <Button
+        android:id="@+id/btn_picker_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="展示选中的照片"
         tools:text=""/>
     <ImageView
         android:id="@+id/iv_picker"

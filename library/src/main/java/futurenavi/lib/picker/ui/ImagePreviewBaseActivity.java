@@ -52,12 +52,6 @@ public abstract class ImagePreviewBaseActivity extends ImageBaseActivity {
             topBar.setLayoutParams(params);
         }
         topBar.findViewById(R.id.btn_ok).setVisibility(View.GONE);
-        topBar.findViewById(R.id.btn_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         mTitleCount = (TextView) findViewById(R.id.tv_des);
 
@@ -73,7 +67,7 @@ public abstract class ImagePreviewBaseActivity extends ImageBaseActivity {
         mViewPager.setCurrentItem(mCurrentPosition, false);
 
         //初始化当前页面的状态
-        mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
+        mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1+"", mImageItems.size()+""));
     }
 
     /**

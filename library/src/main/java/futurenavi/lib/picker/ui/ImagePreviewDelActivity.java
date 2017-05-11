@@ -25,18 +25,21 @@ public class ImagePreviewDelActivity extends ImagePreviewBaseActivity implements
         mBtnDel.setVisibility(View.VISIBLE);
         topBar.findViewById(R.id.btn_back).setOnClickListener(this);
 
-        mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
+        setTitleCount();
         //滑动ViewPager的时候，根据外界的数据改变当前的选中状态和当前的图片的位置描述文本
         mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @SuppressLint("StringFormatMatches")
             @Override
             public void onPageSelected(int position) {
                 mCurrentPosition = position;
-                mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
+                setTitleCount();
             }
         });
     }
-
+    private void setTitleCount() {
+        mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1
+                + "", mImageItems.size() + ""));
+    }
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -61,7 +64,7 @@ public class ImagePreviewDelActivity extends ImagePreviewBaseActivity implements
                 if (mImageItems.size() > 0) {
                     mAdapter.setData(mImageItems);
                     mAdapter.notifyDataSetChanged();
-                    mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
+                    setTitleCount();
                 } else {
                     onBackPressed();
                 }

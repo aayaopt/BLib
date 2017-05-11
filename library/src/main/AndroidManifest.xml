@@ -27,8 +27,13 @@
             android:name="futurenavi.lib.picker.ui.ImagePreviewActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/ImagePickerThemeFullScreen"/>
+
+        <activity
+            android:name="futurenavi.lib.picker.ui.ImagePreviewDelActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
         <!-- 下载服务-->
-        <service android:name="futurenavi.lib.rxdown.function.DownloadService"/>
+
     </application>
 
 </manifest>
